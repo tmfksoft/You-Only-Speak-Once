@@ -1,9 +1,10 @@
-FROM python:3.6-stretch
+FROM python:3.9.17-bullseye
 
 RUN pip install numpy==1.16.6
-RUN pip install flask==1.1.1
-RUN pip install torch==1.4.0+cpu torchvision==0.5.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
-RUN pip install librosa==0.7.2
+RUN pip install flask==2.2.2
+RUN pip install torch==1.8.0+cpu torchvision==0.9.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip install numba==0.57.1
+RUN pip install librosa==0.10.0
 RUN pip install python-speech-features==0.6
 
 RUN apt-get update -y
